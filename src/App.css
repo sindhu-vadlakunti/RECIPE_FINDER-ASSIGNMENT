@@ -1,0 +1,705 @@
+/* Global Styles */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: 'Nunito', sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f8f9fa;
+}
+
+.App {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  flex: 1;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Gochi Hand', cursive;
+  color: #2c3e50;
+  margin-bottom: 1rem;
+}
+
+h1 {
+  font-size: 2.8rem;
+  color: #2c3e50;
+}
+
+h2 {
+  font-size: 2.2rem;
+  color: #34495e;
+}
+
+/* Buttons */
+.btn {
+  font-family: 'Nunito', sans-serif;
+  font-weight: 600;
+  border-radius: 50px;
+  padding: 0.5rem 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.btn-primary {
+  background-color: #3498db;
+  border-color: #3498db;
+}
+
+.btn-primary:hover {
+  background-color: #2980b9;
+  border-color: #2980b9;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.btn-warning {
+  background-color: #f39c12;
+  border-color: #f39c12;
+  color: #fff;
+}
+
+.btn-warning:hover {
+  background-color: #d68910;
+  border-color: #d68910;
+  color: #fff;
+}
+
+/* Cards */
+.card {
+  border: none;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 100%;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+.card-img-top {
+  height: 200px;
+  object-fit: cover;
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+/* Search and Filters */
+.search-container {
+  max-width: 1000px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: linear-gradient(145deg, #fff9fb, #fff0f5);
+  border-radius: 20px;
+  box-shadow: 0 6px 20px rgba(214, 51, 132, 0.1);
+  border: 1px solid #ffebf2;
+}
+
+.search-container h2 {
+  color: #d63384;
+  font-family: 'Gochi Hand', cursive;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  font-size: 2.2rem;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+}
+
+.filters-section {
+  background-color: #fff9fb;
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-top: 1.5rem;
+  border: 1px solid #ffebf2;
+}
+
+.filters-section h5 {
+  color: #d63384;
+  font-weight: 600;
+  font-family: 'Gochi Hand', cursive;
+  font-size: 1.5rem;
+  border-bottom: 2px solid #ffdeeb;
+  padding-bottom: 0.5rem;
+  display: inline-block;
+}
+
+.form-check {
+  padding: 0.5rem 0.75rem;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+  margin: 0.25rem 0;
+}
+
+.form-check:hover {
+  background-color: #fff0f6;
+}
+
+.form-check-input {
+  width: 1.2em;
+  height: 1.2em;
+  margin-top: 0.2em;
+  border: 2px solid #d63384;
+  cursor: pointer;
+}
+
+.form-check-input:checked {
+  background-color: #d63384;
+  border-color: #d63384;
+}
+
+.form-check-label {
+  margin-left: 0.5rem;
+  color: #5f3dc4;
+  font-weight: 500;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.form-check:hover .form-check-label {
+  color: #d63384;
+}
+
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  padding: 1rem 0;
+}
+
+.form-check-input:checked {
+  background-color: #3498db;
+  border-color: #3498db;
+}
+
+/* Hero Container */
+.hero-container {
+  margin-bottom: 3rem;
+}
+
+/* Hero Section */
+.hero {
+  height: 60vh;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  border-bottom: solid 10px #ffaaa5;
+  margin-bottom: 0;
+}
+
+.hero video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(70%);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  color: white;
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.hero h1 {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  color: #ffb6c1; /* Light pink color */
+  font-family: 'Gochi Hand', cursive;
+}
+
+.hero p {
+  font-size: 1.5rem;
+  margin-bottom: 0;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+  color: #ffb6c1; /* Light pink color */
+}
+
+/* Navigation Cards Section */
+.navigation-cards {
+  position: relative;
+  margin: 40px auto 60px;
+  z-index: 10;
+  padding: 0 15px;
+  max-width: 1200px;
+}
+
+.navigation-cards .row {
+  justify-content: center;
+  gap: 40px;
+  margin: 0;
+}
+
+.nav-card-link {
+  text-decoration: none;
+  display: block;
+  height: 100%;
+}
+
+.nav-card-link .card {
+  height: 100%;
+  border: none;
+  border-radius: 15px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  background: #fff0f5; /* Light pink background */
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+  margin: 0 auto;
+  border: 1px solid #ffd1dc; /* Slightly darker pink border */
+}
+
+.card-image-container {
+  height: 250px;
+  overflow: hidden;
+  position: relative;
+  flex-shrink: 0;
+}
+
+.card-img-top {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.5s ease;
+}
+
+.nav-card-link:hover .card-img-top {
+  transform: scale(1.05);
+}
+
+.nav-card-link .card-body {
+  padding: 2rem;
+  position: relative;
+  z-index: 2;
+  background: #fff0f5; /* Light pink background */
+  text-align: center;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.nav-card-link .card-title {
+  color: #2c3e50;
+  font-weight: 700;
+  margin: 0 0 1rem 0;
+  font-family: 'Gochi Hand', cursive;
+  font-size: 2rem;
+  line-height: 1.2;
+}
+
+.nav-card-link .card-text {
+  color: #7f8c8d;
+  font-size: 1.1rem;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.nav-card-link .card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .hero {
+    height: 60vh;
+  }
+  
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+  
+  .hero p {
+    font-size: 1.2rem;
+  }
+  
+  .d-flex {
+    flex-direction: column;
+    gap: 1rem !important;
+  }
+  
+  .nav-card-link .card {
+    width: 100%;
+    max-width: 300px;
+    margin: 0.5rem auto;
+  }
+  
+  .filters {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.recipe-card {
+  animation: fadeIn 0.5s ease-out;
+}
+
+/* Utility Classes */
+.mb-4 {
+  margin-bottom: 1.5rem !important;
+}
+
+.mt-4 {
+  margin-top: 1.5rem !important;
+}
+
+.text-center {
+  text-align: center;
+}
+
+/* Badges */
+.badge {
+  font-weight: 500;
+  padding: 0.5em 0.8em;
+}
+
+.bg-primary {
+  background-color: #3498db !important;
+}
+
+.bg-secondary {
+  background-color: #7f8c8d !important;
+}
+
+/* Favorites Page */
+.favorites-page {
+  padding: 2rem 0;
+}
+
+/* Modal Overlay */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(5px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1050;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+/* Modal Content */
+.modal-content {
+  background: white;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 800px;
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  animation: modalFadeIn 0.3s ease-out;
+}
+
+@keyframes modalFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Close Button */
+.close-btn {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #6c757d;
+  transition: color 0.2s;
+  z-index: 10;
+  padding: 5px 10px;
+  line-height: 1;
+}
+
+.close-btn:hover {
+  color: #343a40;
+}
+
+/* Modal Header */
+.modal-header {
+  padding: 1.5rem 2rem 0.5rem;
+  border-bottom: none;
+}
+
+.modal-title {
+  color: #2c3e50;
+  margin-bottom: 0.5rem;
+  font-size: 1.75rem;
+  font-weight: 600;
+}
+
+/* Modal Body */
+.modal-body {
+  padding: 0 2rem 2rem;
+}
+
+/* Recipe Image */
+.recipe-image-container {
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.recipe-image-container:hover {
+  transform: translateY(-3px);
+}
+
+.recipe-image-container img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Ingredients Section */
+.ingredients-section {
+  background: #f8f9fa;
+  border-radius: 10px;
+  padding: 1.5rem;
+  height: 100%;
+}
+
+.section-title {
+  color: #2c3e50;
+  font-size: 1.25rem;
+  margin-bottom: 1.25rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 2px solid #e9ecef;
+  display: flex;
+  align-items: center;
+}
+
+.section-title i {
+  color: #3498db;
+}
+
+/* Ingredients List */
+.ingredients-list {
+  max-height: 300px;
+  overflow-y: auto;
+  padding-right: 10px;
+  margin-bottom: 1.5rem;
+  scrollbar-width: thin;
+  scrollbar-color: #3498db #f1f1f1;
+}
+
+.ingredients-list::-webkit-scrollbar {
+  width: 6px;
+}
+
+.ingredients-list::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+.ingredients-list::-webkit-scrollbar-thumb {
+  background-color: #3498db;
+  border-radius: 10px;
+}
+
+.ingredient-item {
+  display: flex;
+  align-items: flex-start;
+  padding: 0.75rem 1rem;
+  background: white;
+  border-radius: 8px;
+  margin-bottom: 0.75rem;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.ingredient-item:hover {
+  transform: translateX(5px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.ingredient-bullet {
+  color: #3498db;
+  font-weight: bold;
+  font-size: 1.2rem;
+  line-height: 1.5;
+  margin-right: 10px;
+  flex-shrink: 0;
+}
+
+.ingredient-text {
+  flex: 1;
+  line-height: 1.6;
+  color: #495057;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .modal-content {
+    max-width: 95%;
+  }
+  
+  .modal-header, .modal-body {
+    padding: 1rem;
+  }
+  
+  .modal-title {
+    font-size: 1.5rem;
+  }
+  
+  .ingredients-section {
+    margin-top: 1.5rem;
+  }
+}
+
+/* Recipe Card */
+.recipe-card .card-title {
+  font-size: 1.25rem;
+  margin-bottom: 0.75rem;
+  color: #2c3e50;
+  min-height: 3.5rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.recipe-card .card-text {
+  color: #7f8c8d;
+  font-size: 0.9rem;
+}
+
+/* Loading State */
+.loading-spinner {
+  display: inline-block;
+  width: 2rem;
+  height: 2rem;
+  border: 0.25rem solid rgba(52, 152, 219, 0.3);
+  border-radius: 50%;
+  border-top-color: #3498db;
+  animation: spin 1s ease-in-out infinite;
+  margin-right: 0.5rem;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* Alert Messages */
+.alert {
+  border-radius: 8px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+.alert-danger {
+  background-color: #f8d7da;
+  border: 1px solid #f5c6cb;
+  color: #721c24;
+}
+
+/* Form Controls */
+.form-control {
+  border-radius: 8px;
+  padding: 0.75rem 1rem;
+  border: 1px solid #ced4da;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.form-control:focus {
+  border-color: #80bdff;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+/* Responsive Images */
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+}
+
+/* List Group */
+.list-group-item {
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  padding: 0.75rem 1.25rem;
+}
+
+/* Navbar */
+.navbar {
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand {
+  font-family: 'Gochi Hand', cursive;
+  font-size: 1.8rem !important;
+  color: #2c3e50 !important;
+}
+
+.nav-link {
+  font-weight: 600;
+  padding: 0.5rem 1rem !important;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #3498db !important;
+}
+
+/* Footer */
+.footer {
+  background-color: #2c3e50;
+  color: white;
+  padding: 2rem 0;
+  margin-top: 3rem;
+}
+
+.footer a {
+  color: #3498db;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer a:hover {
+  color: #5dade2;
+  text-decoration: none;
+}
